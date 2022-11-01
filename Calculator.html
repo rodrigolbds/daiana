@@ -29,10 +29,43 @@
 </body>
 <script>
     function calcular() {
-        //create here
-        alert("calcular")
+        
+        var nota1 = 10;
+        var nota2 = 8;
+        var nota3 = 7;
+        var resultadoDaMedia = somarMedia(nota1, nota2, nota3);
+        var passou = calculaSePessoaPassou(resultadoDaMedia);
 
+        if (passou) {
+            alert("Passou!");
+        } else {
+            alert("Rodou.");
+        }
     }
+
+    function somarMedia(param1, param2, param3) {
+        var resultado = (param1 + param2 + param3) / 3;
+        return resultado;
+    }
+
+    function calculaSePessoaPassou(mediaFinal) {
+        if (mediaFinal > 6) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function somar(param1, param2) {
+        var resultado = param1 + param2;
+        return resultado;
+    }
+    
+    function subtrair(param1, param2) {
+        var resultado = param1 - param2;
+        return resultado;
+    }
+    
 </script>
 
 </html>
