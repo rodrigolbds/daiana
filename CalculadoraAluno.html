@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule suas notas </title>
+</head>
+
+<body onload="checandoCookies()">
+    <h1>Calcule suas notas aqui </h1>
+    <div>
+        <label>Nota Grau A:</label>
+        <input type="number" name="notaA" id="NotaA" onchange="nota1()" onfocus="this.value=''">
+    </div>
+    <div>
+        <label>Nota Grau B:</label>
+        <input type="number" name="notaB" id="NotaB" onchange="nota2()" onfocus="this.value=''">
+    </div>
+    <div>
+        <label>Nota Grau C:</label>
+        <input type="number" name="notaC" id="NotaC" onchange="nota3()" onfocus="this.value=''">
+    </div>
+    <div>
+        <button type="button" onclick="calcular()" class="calcular">Calcular
+            </button>
+    </div>
+    <div>
+        <button type="button" onclick="voltar()" class="voltar">Voltar</button>
+    </div>
+    <div>
+        <button type="button" onclick="pi()" class="PI">Calcule o PI
+            </button>
+    </div>
+    <div>
+        <button type="button" onclick="aleatorio()" class="Randon">Numero
+                Aleatorio </button>
+    </div>
+    <div>
+        <button type="button" onclick="verificacaoaleatorioehmaiorque5()">Verifica NumeroAleatorio </button>
+    </div>
+    <div>
+        <button type="button" onclick="dataatual()" class="Dataatual">Data Atual </button>
+    </div>
+    <div>
+        <button type="button" onclick="mesatual()" class="Mesatual">Mês Atual </button>
+    </div>
+    <div>
+        <button type="button" onclick="verificapar()" class="par">Verificar Par  </button>
+    </div>
+    <div>
+        <button type="button" onclick="divisao()" class="divide">Dividi Numeros  </button>
+    </div>
+    <div>
+        <button type="button" onclick="multiplicacao()" class="divide">Multiplica Numeros  </button>
+    </div>
+    <div>
+        <button type="button" onclick="adicao()" class="divide">Adiciona Numeros  </button>
+    </div>
+    <div>
+        <button type="button" onclick="subtracao()" class="divide">Subtrai Numeros  </button>
+    </div>
+</body>
+<script>
+    function notaa() {
+        var notagraua = document.getElementById("NotaA")
+        return notagraua.value;
+
+    }
+
+    function notab() {
+        var notagraub = document.getElementById("NotaB")
+        return notagraub.value
+    }
+
+    function notac() {
+        var notagrauc = document.getElementById("NotaC")
+        return notagrauc.value
+    }
+
+    function calcular() {
+        var notagraua = notaa();
+        var notagraub = notab();
+        var notagrauc = notac();
+        var media = (parseInt(notagraua) + parseInt(notagraub) + parseInt(notagrauc)) / 3;
+        if (media >= 6) {
+            alert("Passou:" + media)
+        } else {
+            alert("reprovou:" + media)
+        }
+
+    }
+
+    function voltar() {
+        window.location.href = "dashboard.html"
+    }
+
+    function buscarpi() {
+        return Math.PI;
+    }
+
+    function pi() {
+        var pi = buscarpi();
+        alert(pi);
+    }
+
+    function aleatorio() {
+        var retornarnumero = BuscaNumeroAleatorio();
+        alert(retornarnumero);
+    }
+
+    function BuscaNumeroAleatorio() {
+        return Math.random() * 10;
+    }
+
+
+    function verificacaoaleatorioehmaiorque5() {
+        var verificacadecampoomaiorque5 = BuscaNumeroAleatorio();
+
+        if (verificacadecampoomaiorque5 >= 5) {
+            alert("Maior que 5:" + verificacadecampoomaiorque5)
+        } else {
+            alert("Menor que 5:" + verificacadecampoomaiorque5)
+        }
+    }
+
+    function buscardataatual() {
+        var data = new Date();
+        var dia = String(data.getDate()).padStart(2, '0');
+        return dia;
+    }
+
+    function dataatual() {
+        var data = buscardataatual();
+        alert(data);
+    }
+
+    function buscarmesatual() {
+        var data = new Date();
+        var mes = String(data.getMonth() + 1).padStart(2, '0');
+        return mes;
+
+    }
+
+    function mesatual() {
+        var mes = buscarmesatual();
+        alert(mes)
+    }
+
+    function verificapar() {
+        for (var i = 0; i < 10; i++) {
+            if (i % 2 == 0) {
+                alert("Par")
+            } else {
+                alert("Inpar")
+            }
+        }
+
+    }
+
+
+    function retornadivisao(numero1, numero2, ) {
+        return numero1 / numero2;
+    }
+
+    function divisao() {
+        var divisaoa = notaa();
+        var divisaob = notab();
+        var resultado = retornadivisao(divisaoa, divisaob);
+        alert(resultado)
+    }
+
+    function retornamultiplicacao(numero1, numero2, numero3) {
+        return numero1 * numero2 * numero3;
+    }
+
+    function multiplicacao() {
+        var multiplicacaoa = notaa();
+        var multiplicacaob = notab();
+        var multiplicacaoc = notac();
+        var resultadomult = retornamultiplicacao(multiplicacaoa, multiplicacaob, multiplicacaoc)
+        alert(resultadomult)
+    }
+
+    function retornaadicao(numero1, numero2, numero3) {
+        return numero1 + numero2 + numero3;
+    }
+
+    function adicao() {
+        var adicaoa = notaa();
+        var adicaob = notab();
+        var adicaoc = notac();
+        var resultadoadi = retornaadicao(parseInt(adicaob), parseInt(adicaob), parseInt(adicaoc))
+        alert(resultadoadi)
+    }
+
+    function retornamulsubtracao(numero1, numero2, numero3) {
+        return numero1 - numero2 - numero3;
+    }
+
+    function subtracao() {
+        var subtraia = notaa();
+        var subtraib = notab();
+        var subtraic = notac();
+        var resultadosub = retornamulsubtracao(subtraia, subtraib, subtraic)
+        alert(resultadosub)
+    }
+
+    function nota1() {
+        var calcularcampoa = notaa();
+        var calcular = (parseInt(calcularcampoa))
+        if (calcular <= 10) {
+
+        } else {
+            alert("O máximo da nota é 10 no campo A")
+        }
+    }
+
+    function nota2() {
+        var calcularcampob = notab();
+        var calcularb = (parseInt(calcularcampob))
+        if (calcularb <= 10) {
+
+        } else {
+            alert("O máximo da nota é 10 no campo B")
+        }
+    }
+
+    function nota3() {
+        var calcularcampoc = notac();
+        var calcularc = (parseInt(calcularcampoc))
+        if (calcularc <= 10) {
+
+        } else {
+            alert("O máximo da nota é 10 no campo C")
+        }
+    }
+
+    function checandoCookies() {
+        if (navigator.cookieEnabled == true) {
+            alert("Cookies são permitidos")
+        } else {
+            alert("Cookies não são permitidos")
+        }
+    }
+</script>
+
+</html>
