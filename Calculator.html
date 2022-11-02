@@ -30,9 +30,9 @@
 <script>
     function calcular() {
         
-        var nota1 = 10;
-        var nota2 = 8;
-        var nota3 = 7;
+        var nota1 = notaPrimeiroSemestre();
+        var nota2 = notaSegundoSemestre();
+        var nota3 = notaTerceiroSemestre();
         var resultadoDaMedia = somarMedia(nota1, nota2, nota3);
         var passou = calculaSePessoaPassou(resultadoDaMedia);
 
@@ -65,7 +65,22 @@
         var resultado = param1 - param2;
         return resultado;
     }
-    
+
+    function notaPrimeiroSemestre()  {
+    var primeiraNota = document.getElementById("NotaA");
+        return primeiraNota.value;
+    }
+
+    function notaSegundoSemestre()  {
+    var segundaNota = document.getElementById("NotaB");
+        return segundaNota.value;
+    }
+
+    function notaTerceiroSemestre()  {
+    var terceiraNota = document.getElementById("NotaC");
+        return terceiraNota.value;
+    }
+
 </script>
 
 </html>
