@@ -48,15 +48,16 @@
         //No final teremos a quantidade de acertos do usuário. Se for Maior que 2, ele passou. Caso contrário, ele rodou.
         //Dar um alerta dizendo o resultado: "Voce Passou, acertou X questões". ou "Você reprovou pois acertou somente X questões"
 
+        var quantidadeDeAcertos = 0;
         var campoResposta1 = document.getElementsByName('capital');
 
         for (i = 0; i < campoResposta1.length; i++) {
             if (campoResposta1[i].checked) { // aqui verifica se o o campo está selecionado
                 var valorEscolhido = campoResposta1[i].value; // aqui pega o valor do campo selecionado
                 if (valorEscolhido == "1") {
-                    alert("Acertou pergunta 1"); //Esse é o momento que sabemos quando o usuário acertou. Deve-se retirar o Alerta e substituir pela contagem.
+                    quantidadeAcertos++;
                 } else {
-                    alert("Errou pergunta 1"); // Não precisamos mais disso, podemos tirar.
+                    
                 }
             }
         }
@@ -67,9 +68,9 @@
             if (campoResposta2[i].checked) {
                 var valorEscolhido2 = campoResposta2[i].value;
                 if (valorEscolhido2 == "1") {
-                    alert("Acertou pergunta 2"); //Esse é o momento que sabemos quando o usuário acertou. Deve-se retirar o Alerta e substituir pela contagem.
+                    quantidadeAcertos++;
                 } else {
-                    alert("Errou pergunta 2"); // Não precisamos mais disso, podemos tirar.
+
                 }
             }
         }
@@ -80,14 +81,14 @@
             if (campoResposta3[i].checked) {
                 var valorEscolhido3 = campoResposta3[i].value;
                 if (valorEscolhido3 == "2") {
-                    alert("Acertou pergunta 3"); //Esse é o momento que sabemos quando o usuário acertou. Deve-se retirar o Alerta e substituir pela contagem.
+                    quantidadeAcertos++;
                 } else {
-                    alert("Errou pergunta 3"); // Não precisamos mais disso, podemos tirar.
+
                 }
             }
         }
 
-
+        
 
         //Aqui é o momento que precisamos verificar a quantidade de acertos. Para isso, deve-se utilizar a variável criada no ínicio, que contém a quantidade total de acertos
         //SE for maior que 2 acertos, então o usuário passou, pois é 66% de acerto
