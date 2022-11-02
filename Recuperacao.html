@@ -55,7 +55,7 @@
             if (campoResposta1[i].checked) { // aqui verifica se o o campo está selecionado
                 var valorEscolhido = campoResposta1[i].value; // aqui pega o valor do campo selecionado
                 if (valorEscolhido == "1") {
-                    quantidadeAcertos++;
+                    quantidadeDeAcertos++;
                 } else {
                     
                 }
@@ -68,7 +68,7 @@
             if (campoResposta2[i].checked) {
                 var valorEscolhido2 = campoResposta2[i].value;
                 if (valorEscolhido2 == "1") {
-                    quantidadeAcertos++;
+                    quantidadeDeAcertos++;
                 } else {
 
                 }
@@ -81,14 +81,18 @@
             if (campoResposta3[i].checked) {
                 var valorEscolhido3 = campoResposta3[i].value;
                 if (valorEscolhido3 == "2") {
-                    quantidadeAcertos++;
+                    quantidadeDeAcertos++;
                 } else {
 
                 }
             }
         }
 
-        
+        if (quantidadeDeAcertos >= 2) {
+            alert("Você passou de ano!");
+        } else {
+            alert("Infelizmente você não passou de ano.");
+        }
 
         //Aqui é o momento que precisamos verificar a quantidade de acertos. Para isso, deve-se utilizar a variável criada no ínicio, que contém a quantidade total de acertos
         //SE for maior que 2 acertos, então o usuário passou, pois é 66% de acerto
