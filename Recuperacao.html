@@ -31,26 +31,58 @@
         <input type="radio" name="continente" value="3" /> Oceania<br />
         <input type="radio" name="continente" value="4" /> Antartida
     </div>
-    <br/>
+    <br />
     <div>
         <button type="button" onclick="pergunta1()">Responder
-            </button>
+        </button>
     </div>
 </body>
 <script>
-   function pergunta1() { 
+    function pergunta1() {
         var resposta1 = document.getElementsByName('capital');
 
-        for(i = 0; i < resposta1.length; i++) { 
-            if(resposta1[i].checked) {
+        for (i = 0; i < resposta1.length; i++) {
+            if (resposta1[i].checked) {
                 var valorEscolhido = resposta1[i].value;
-            } if (resposta1[i] == "1") {
-            alert("Resposta certa");
-        } else {
-            alert("Resposta errada");
+                if (valorEscolhido == "1") {
+                    alert("Acertou pergunta 1");
+                } else {
+                    alert("Errou pergunta 1");
+                }
+            }
         }
+    }
+
+    function pergunta2() {
+        var resposta2 = document.getElementsByName('estado');
+
+        for (i = 0; i < resposta2.length; i++) {
+            if (resposta2[i].checked) {
+                var valorEscolhido2 = resposta2[i].value;
+                if (valorEscolhido2 == "1") {
+                    alert("Acertou pergunta 2");
+                } else {
+                    alert("Errou pergunta 2");
+                }
+            }
         }
-   }
+    }
+
+    function pergunta3() {
+        var resposta3 = document.getElementsByName('continente');
+
+        for (i = 0; i < resposta3.length; i++) {
+            if (resposta3[i].checked) {
+                var valorEscolhido3 = resposta3[i].value;
+                if (valorEscolhido3 == "2") {
+                    alert("Acertou pergunta 3");
+                } else {
+                    alert("Errou pergunta 3");
+                }
+            }
+        }
+    }
+
 </script>
 
 </html>
