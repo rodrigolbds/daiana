@@ -41,18 +41,18 @@
     function Resposta() {
 
         //O que precisamos fazer agora é criar uma variável para receber o resultado da QUANTIDADE de acertos.
-        //Essa variável deve ser criada no início da Função, pois ela deve estar acessível durante todo a execução
+        //Essa variável deve ser criada no início da Função, pois ela deve estar acessível durante todo a execução:
         //var quantidadeAcertos = 0;
         //Após isso precisamos identificar o local que o usuário acertou as perguntas. E somar mais 1 na variável
         //quantidadeAcertos = quantidadeAcertos + 1
         //No final teremos a quantidade de acertos do usuário. Se for Maior que 2, ele passou. Caso contrário, ele rodou.
         //Dar um alerta dizendo o resultado: "Voce Passou, acertou X questões". ou "Você reprovou pois acertou somente X questões"
 
-        var resposta1 = document.getElementsByName('capital');
+        var campoResposta1 = document.getElementsByName('capital');
 
-        for (i = 0; i < resposta1.length; i++) {
-            if (resposta1[i].checked) {
-                var valorEscolhido = resposta1[i].value;
+        for (i = 0; i < campoResposta1.length; i++) {
+            if (campoResposta1[i].checked) {
+                var valorEscolhido = campoResposta1[i].value;
                 if (valorEscolhido == "1") {
                     alert("Acertou pergunta 1"); //Esse é o momento que sabemos quando o usuário acertou. Deve-se retirar o Alerta e substituir pela contagem.
                 } else {
@@ -61,11 +61,11 @@
             }
         }
 
-        var resposta2 = document.getElementsByName('estado');
+        var campoResposta2 = document.getElementsByName('estado');
 
-        for (i = 0; i < resposta2.length; i++) {
-            if (resposta2[i].checked) {
-                var valorEscolhido2 = resposta2[i].value;
+        for (i = 0; i < campoResposta2.length; i++) {
+            if (campoResposta2[i].checked) {
+                var valorEscolhido2 = campoResposta2[i].value;
                 if (valorEscolhido2 == "1") {
                     alert("Acertou pergunta 2"); //Esse é o momento que sabemos quando o usuário acertou. Deve-se retirar o Alerta e substituir pela contagem.
                 } else {
@@ -74,11 +74,11 @@
             }
         }
 
-        var resposta3 = document.getElementsByName('continente');
+        var campoResposta3 = document.getElementsByName('continente');
 
-        for (i = 0; i < resposta3.length; i++) {
-            if (resposta3[i].checked) {
-                var valorEscolhido3 = resposta3[i].value;
+        for (i = 0; i < campoResposta3.length; i++) {
+            if (campoResposta3[i].checked) {
+                var valorEscolhido3 = campoResposta3[i].value;
                 if (valorEscolhido3 == "2") {
                     alert("Acertou pergunta 3"); //Esse é o momento que sabemos quando o usuário acertou. Deve-se retirar o Alerta e substituir pela contagem.
                 } else {
@@ -89,7 +89,7 @@
 
 
 
-        //Aqui é o momento que precisamos verificar a quantidade de acertos.
+        //Aqui é o momento que precisamos verificar a quantidade de acertos. Para isso, deve-se utilizar a variável criada no ínicio, que contém a quantidade total de acertos
         //SE for maior que 2 acertos, então o usuário passou, pois é 66% de acerto
         //SE for menor que 2, então o usuário reprovou, pois ele acertou 1 ou nenhuma questão. (33% ou 0% de acerto)
         //Verificando isso, para cada SE deve-se dar um alerta específico, com a mensagem adequada.
