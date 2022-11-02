@@ -33,16 +33,24 @@
     </div>
     <br/>
     <div>
-        <button type="button" onclick="Responder()">Responder
+        <button type="button" onclick="pergunta1()">Responder
             </button>
     </div>
 </body>
 <script>
-    function Responder() {
-        //faça seu código aqui
+   function pergunta1() { 
+        var resposta1 = document.getElementsByName('capital');
 
-    }
+        for(i = 0; i < resposta1.length; i++) { 
+            if(resposta1[i].checked) {
+                var valorEscolhido = resposta1[i].value;
+            } if (resposta1[i] == "1") {
+            alert("Resposta certa");
+        } else {
+            alert("Resposta errada");
+        }
+        }
+   }
 </script>
-
 
 </html>
