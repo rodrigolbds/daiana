@@ -49,6 +49,8 @@
         //Dar um alerta dizendo o resultado: "Voce Passou, acertou X questões". ou "Você reprovou pois acertou somente X questões"
 
         var quantidadeDeAcertos = 0;
+        var quantidadeDeErros = 0;
+
         var campoResposta1 = document.getElementsByName('capital');
 
         for (i = 0; i < campoResposta1.length; i++) {
@@ -57,7 +59,7 @@
                 if (valorEscolhido == "1") {
                     quantidadeDeAcertos++;
                 } else {
-                    
+                    quantidadeDeErros++;
                 }
             }
         }
@@ -70,7 +72,7 @@
                 if (valorEscolhido2 == "1") {
                     quantidadeDeAcertos++;
                 } else {
-
+                    quantidadeDeErros++;
                 }
             }
         }
@@ -83,15 +85,17 @@
                 if (valorEscolhido3 == "2") {
                     quantidadeDeAcertos++;
                 } else {
-
+                    quantidadeDeErros++;
                 }
             }
         }
 
         if (quantidadeDeAcertos >= 2) {
             alert("Você passou de ano!");
+            alert("Você acertou " + quantidadeDeAcertos + " questões!");
         } else {
             alert("Infelizmente você não passou de ano.");
+            alert("Você errou " + quantidadeDeErros + " questões!");
         }
 
         //Aqui é o momento que precisamos verificar a quantidade de acertos. Para isso, deve-se utilizar a variável criada no ínicio, que contém a quantidade total de acertos
