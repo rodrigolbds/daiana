@@ -46,7 +46,7 @@
         //Após isso precisamos identificar o local que o usuário acertou as perguntas. E somar mais 1 na variável
         //quantidadeAcertos = quantidadeAcertos + 1
         //No final teremos a quantidade de acertos do usuário. Se for Maior que 2, ele passou. Caso contrário, ele rodou.
-        //Dar um alerta dizendo o resultado: "Voce Passou, acertou X questões". ou "Você reprovou por acertou somente X questões"
+        //Dar um alerta dizendo o resultado: "Voce Passou, acertou X questões". ou "Você reprovou pois acertou somente X questões"
 
         var resposta1 = document.getElementsByName('capital');
 
@@ -54,9 +54,9 @@
             if (resposta1[i].checked) {
                 var valorEscolhido = resposta1[i].value;
                 if (valorEscolhido == "1") {
-                    alert("Acertou pergunta 1");
+                    alert("Acertou pergunta 1"); //Esse é o momento que sabemos quando o usuário acertou. Deve-se retirar o Alerta e substituir pela contagem.
                 } else {
-                    alert("Errou pergunta 1");
+                    alert("Errou pergunta 1"); // Não precisamos mais disso, podemos tirar.
                 }
             }
         }
@@ -67,9 +67,9 @@
             if (resposta2[i].checked) {
                 var valorEscolhido2 = resposta2[i].value;
                 if (valorEscolhido2 == "1") {
-                    alert("Acertou pergunta 2");
+                    alert("Acertou pergunta 2"); //Esse é o momento que sabemos quando o usuário acertou. Deve-se retirar o Alerta e substituir pela contagem.
                 } else {
-                    alert("Errou pergunta 2");
+                    alert("Errou pergunta 2"); // Não precisamos mais disso, podemos tirar.
                 }
             }
         }
@@ -80,12 +80,21 @@
             if (resposta3[i].checked) {
                 var valorEscolhido3 = resposta3[i].value;
                 if (valorEscolhido3 == "2") {
-                    alert("Acertou pergunta 3");
+                    alert("Acertou pergunta 3"); //Esse é o momento que sabemos quando o usuário acertou. Deve-se retirar o Alerta e substituir pela contagem.
                 } else {
-                    alert("Errou pergunta 3");
+                    alert("Errou pergunta 3"); // Não precisamos mais disso, podemos tirar.
                 }
             }
         }
+
+
+
+        //Aqui é o momento que precisamos verificar a quantidade de acertos.
+        //SE for maior que 2 acertos, então o usuário passou, pois é 66% de acerto
+        //SE for menor que 2, então o usuário reprovou, pois ele acertou 1 ou nenhuma questão. (33% ou 0% de acerto)
+        //Verificando isso, para cada SE deve-se dar um alerta específico, com a mensagem adequada.
+
+
     }
 </script>
 
