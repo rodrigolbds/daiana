@@ -51,8 +51,8 @@
         var campoResposta1 = document.getElementsByName('capital');
 
         for (i = 0; i < campoResposta1.length; i++) {
-            if (campoResposta1[i].checked) {
-                var valorEscolhido = campoResposta1[i].value;
+            if (campoResposta1[i].checked) { // aqui verifica se o o campo está selecionado
+                var valorEscolhido = campoResposta1[i].value; // aqui pega o valor do campo selecionado
                 if (valorEscolhido == "1") {
                     alert("Acertou pergunta 1"); //Esse é o momento que sabemos quando o usuário acertou. Deve-se retirar o Alerta e substituir pela contagem.
                 } else {
