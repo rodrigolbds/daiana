@@ -1,0 +1,19 @@
+ESTRUTURA,
+
+•	Criação de uma nova página de Recuperação
+
+HISTÓRIA DE USUÁRIO
+
+•	Como estudante
+•	Quero poder fazer minha recuperação
+•	Para que eu possa verificar passar no semestre
+
+
+COMPORTAMENTO:
+
+1) Ao receber o alerta "Não passou" na tela de "Calculator.html", redirecionar o usuário para a tela "Recuperacao.html"
+2) A tela de recuperação tem uma série de perguntas.
+3) Quando o usuário responder todas (são obrigatórias), deve clicar no botão "Responder"
+4) O Sistema deve calcular se o usuário passou (média > 6)
+5) Se o usuário passou deve dar um alert "Parabéns você passou de ano"
+5) Se o usuário rodou deve dar um alert "Que pena, você rodou"
