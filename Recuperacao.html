@@ -40,7 +40,52 @@
 <script>
     function Resposta() {
 
-        //Fazer tudo de novo
+        var respostasCertas = 0;
+        var respostasErradas = 0;
+
+        var resposta1 = document.getElementsByName('capital');s
+        for (i = 0, i < resposta1.length, i++) {
+            if (resposta1[i].checked) {
+                var valorEscolhido = resposta1[i].value;
+                if (valorEscolhido == "1") {
+                    respostasCertas++;
+                } else {
+                    respostasErradas++;
+                }
+            }
+        }
+
+        var resposta2 = document.getElementsByName('estado');
+        for (i = 0, i < resposta2.length, i++) {
+            if (resposta2[i].checked) {
+                var valorEscolhido = resposta2[i].value;
+                if (valorEscolhido == "1") {
+                    respostasCertas++;
+                } else {
+                    respostasErradas++;
+                }
+            }
+        }
+
+        var resposta3 = document.getElementsByName('continente');
+        for (i = 0, i < resposta3.length, i++) {
+            if (resposta3[i].checked) {
+                var valorEscolhido = resposta3[i].value;
+                if (valorEscolhido == "2") {
+                    respostasCertas++;
+                } else {
+                    respostasErradas++;
+                }
+            }
+        }
+
+        if (respostasCertas >= 2) {
+            alert("Parabéns, você passou de ano!");
+            alert("Você acertou " + respostasCertas + " questões e errou " + respostasErradas + " questões.")
+        } else {
+            alert("Infelizmente você não passou de ano.");
+            alert("Você errou " + respostasErradas + " questões e acertou " + respostasCertas + "questões.")
+        }
     }
 </script>
 
